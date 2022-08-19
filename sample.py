@@ -42,7 +42,7 @@ def getQuad(kmlPath):
     latMax = max(lats)
     lonMin = min(lons)
     lonMax = max(lons)
-    print("Sampling for quad between lat [%f,%f] and lon [%f,%f]" % (latMin, latMax, lonMin, lonMax))
+    print("Sampling for quad between lat [%f,%f] [deg] and lon [%f,%f] [deg]" % (latMin, latMax, lonMin, lonMax))
     return [latMin, latMax, lonMin, lonMax]
 
 def interp1(xx, yy, x):
@@ -80,7 +80,7 @@ def main(kmlPath, ppd=50):
     alt = rbs(yy, xx)
     tifPath = kmlPath.replace(".kml", ".tif")
     imageio.imwrite(tifPath, alt)
-    print("Result sampled at %f points/degree for a final resolution of %u [px] x %u[px]" % (ppd, len(yy), len(xx)))
+    print("Result sampled at %f [points/degree] for a final resolution of %u [px] x %u [px]" % (ppd, len(yy), len(xx)))
 
 if __name__ == "__main__":
     main(*sys.argv[1:])
