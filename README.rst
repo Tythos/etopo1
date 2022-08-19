@@ -5,6 +5,16 @@ Set of basic tools for handling topographical datasets from NOAA's excellent
 "ETOPO1" relief data. Includes three basic operations that can be easily
 extended and customized.
 
+Source
+------
+
+By default, the scripts use a relief GeoTIFF from the following NOAA resource:
+
+  https://ngdc.noaa.gov/mgg/global/relief/ETOPO1/data/bedrock/grid_registered/georeferenced_tiff/ETOPO1_Bed_g_geotiff.zip
+
+This can be customized by modifiying the "URL" module-level variable in
+"fetch.py" before its entry point is invoked.
+
 Scripts
 -------
 
