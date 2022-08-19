@@ -18,11 +18,16 @@ URL = "https://ngdc.noaa.gov/mgg/global/relief/ETOPO1/data/bedrock/grid_register
 def getArchive(zipFile):
     """
     Performs an HTTP GET request against the NOAA URL and writes the resulting
-    binary contents to the (untracked) store as a .ZIP file.
+    binary contents to the (untracked) store as a .ZIP file. Aborts if the file
+    already exists.
     """
     res = requests.get(URL)
-    with open(MOD_PATH + "/store/%s" % zipFile, 'wb') as f:
-        f.write(res.content)
+    if not os.path.isdir(MOD_PATH + "/store/"):
+        os.mkdir(MOD_PATH + "/store/")
+    filePath = MOD_PATH + "/store/%s" % zipFile
+    if not os.path.isfile(filePath):
+        with open(filePath, 'wb') as f:
+            f.write(res.content)
 
 def extractData(zipFile, tifFile):
     """
