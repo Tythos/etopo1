@@ -1,0 +1,6 @@
+requests >= 2.24
+BeautifulSoup4 >= 4.11
+lxml >= 4.9
+imageio >= 2.21
+scipy >= 1.5
+numpy >= 1.19
