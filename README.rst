@@ -10,7 +10,7 @@ Source
 
 By default, the scripts use a relief GeoTIFF from the following NOAA resource:
 
-  https://ngdc.noaa.gov/mgg/global/relief/ETOPO1/data/bedrock/grid_registered/georeferenced_tiff/ETOPO1_Bed_g_geotiff.zip
+  https://ngdc.noaa.gov/mgg/global/relief/ETOPO1/data/bedrock/grid_registered/georeferenced_tiff/
 
 This can be customized by modifiying the "URL" module-level variable in
 "fetch.py" before its entry point is invoked.
