@@ -5,6 +5,8 @@ Set of basic tools for handling topographical datasets from NOAA's excellent
 "ETOPO1" relief data. Includes three basic operations that can be easily
 extended and customized.
 
+.. contents::
+
 Source
 ------
 
